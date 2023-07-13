@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="dashboardstyle.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="side-pannel" id="sidepanel">
+        <div class="inner-side-pannel">
+            <span class="close-panel" id="closePanel" onclick="hide_navbar()">
+                <i class="bi bi-x-lg"></i>
+            </span>
+            <h1 class="heading">
+                <div class="iconnew">
+                    <i class="bi bi-box-fill"></i>
+                </div>
+                </i>Dashboard
+            </h1>
+            <div class="btn-container">
+                <a href="#">
+                    <button class="btn1 active">
+                        <div class="btn-pair">
+                            <i class="bi bi-house m0 bi1"></i>Home
+                        </div>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn1">
+                        <div class="btn-pair">
+                            <i class="bi bi-filter-square-fill m0 bi1"></i>Operations
+                        </div>
+                        <i class="bi bi-chevron-right bi2"></i>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn1">
+                        <div class="btn-pair">
+                            <i class="bi bi-share m0 bi1"></i>Connections
+                        </div>
+                        <i class="bi bi-chevron-right bi2"></i>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn1">
+                        <div class="btn-pair">
+                            <i class="bi bi-file-bar-graph m0 bi1"></i>Analytics
+                        </div>
+                        <i class="bi bi-chevron-right bi2"></i>
+                    </button>
+                </a>
+                <a href="#">
+                    <button class="btn1">
+                        <div class="btn-pair">
+                            <i class="bi bi-sliders m0 bi1"></i>Settings
+                        </div>
+                    </button></a>
+                <a href="#"><button class="btn1">
+                        <div class="btn-pair">
+                            <i class="bi bi-people m0 bi1"></i>Developers
+                        </div>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="left-navbar">
+            <span class="menu" id="menu" onclick="show_navbar()">
+                <i class="bi bi-list"></i>
+            </span>
+        </div>
+        <div class="right-navbar">
+            <div class="pill">
+                <div class="dot"></div>
+                <p class="pilltext">Active:3</p>
+
+            </div>
+            <div class="profile">
+                <button class="btnprofile">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+                        alt="profile" class="userprofile">
+                </button>
+                <span class="user-names">
+                    <span class="profile-name">Vivek Oberoi</span>
+                    <span class="user-designation">End user</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function show_navbar() {
+            document.getElementById("sidepanel").style.display = "block";
+        }
+        function hide_navbar() {
+            document.getElementById("sidepanel").style.display = "none";
+        }
+        
+        
+    </script>
+</body>
+
+</html>

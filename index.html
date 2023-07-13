@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+
+        #string{
+            display: block;
+            margin: 0 auto;
+            height: 7rem;
+            width: 20rem;
+            padding: 3px 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+        }
+        .btn{
+            margin: 1rem;
+        }
+        .count{
+            display: block;
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="string">Welcome To The Practice Page.</textarea>
+    <div class="buttons">
+    <button class="btn" onclick="touppercase()">TO UPPER CASE</button>
+    <button class="btn" onclick="lowercase()">to lower case</button>
+    <button class="btn" onclick="wrodco()">Word Count</button>
+    <button class="btn" onclick="letco()">Letter Count</button>
+</div>
+    <br>
+    <br>
+    <br>
+    <span class="count" id="wordcount"></span>
+
+    <br>
+    <span class="count" id="lettercount"></span>
+</body>
+<script>
+    function touppercase(){
+        let up= document.getElementById("string").innerHTML;
+        up= up.toUpperCase()
+        document.getElementById("string").innerHTML=up;
+    }
+    function lowercase(){
+        let lo= document.getElementById("string").innerHTML;
+        lo= lo.toLowerCase();
+        document.getElementById("string").innerHTML = lo;
+    }
+    function wrodco(){
+        let wo= document.getElementById("string").innerHTML;
+        wo = wo.trim();
+        let wc = 1;
+        for (let i = 0; i < wo.length; i++) {
+            if(wo[i]==" "){
+            wc++;
+        }
+            }
+        document.getElementById("wordcount").innerHTML=  "Word count:" + wc;
+    }
+    function letco(){
+        let co= document.getElementById("string").innerHTML;
+        co= co.trim(); //to remove the extra space count in this string
+        co = co.length;
+        // alert(co)
+        document.getElementById("lettercount").innerText= "Letter count:" + co;
+
+    }
+</script>
+</html>
